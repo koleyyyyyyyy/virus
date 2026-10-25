@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Letter - Page 2</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="letter-page">
+        <div class="letter-container">
+            <!-- Start with the opening GIF -->
+            <img src="images/envelope-opening.GIF" alt="Opening Letter" class="opening-gif" />
+            
+            <!-- Add 'hidden' class so text is hidden while the GIF plays -->
+            <div class="letter-text hidden" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 65% !important; max-height: 55% !important; overflow-y: auto !important; text-align: center; box-sizing: border-box !important; padding: 0 10px;">
+                <h1 style="font-size: 14px; margin-top: 0; margin-bottom: 8px;">Continued...</h1>
+                <p style="font-size: 10px; line-height: 1.4; margin: 0;">
+                    I'm so thankful that you came into my life and, most importantly, that you stayed for an entire year. Sa tanan nga tawo sa kalibutan, ikaw ang akong gipili, ug thankful kaayo ko nga ikaw pud ang nagpili nako. Thank you for loving me, for being patient with me, and for staying even when things weren't always easy for us.
+
+                    I know nga dili perfect ang atong relasyon. Naa tay mga away, misunderstandings, ug mga panahon nga kapoy na ta, pero bisan pa sa tanan, we still choose each other. And that's what makes our love so special to me. I'm sorry for my mistakes, love, and I promise to keep learning and becoming better for you and for us. 🥹❤️
+
+                    Salamat kaayo kay niabot ka sa akong kinabuhi, ug mas labaw pa, salamat kay nagpabilin ka. You became one of the most beautiful parts of my life, and I hope nga dili lang kutob sa one year ang atong storya. I want more memories, more anniversaries, and more years with you.
+
+                    Happy Anniversary, palangga! Ikaw gihapon ang akong pilion karon ug sa umaabot. I love you so much, and I'm always grateful that I have you. Here's to more years of loving each other.
+                </p>
+                <div style="text-align: center; margin-top: 10px;">
+                    <a href="letter.html?letter=love-you" class="next-btn">&larr; Back to Page 1</a>
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="back-link">Back to Envelopes</a>
+    </main>
+
+    <script>
+        // Same timer logic as your main script to swap to final image and reveal text
+        const letterText = document.querySelector(".letter-text");
+        const gif = document.querySelector(".opening-gif");
+        const audio = new Audio("1.mp3"); // Replace with your audio filename/path
+        audio.loop = true;
+        audio.play().catch(() => {});
+
+        setTimeout(() => {
+            gif.src = "images/letter-final.png";
+            letterText.classList.remove("hidden");
+        }, 1200);
+    </script>
+</body>
+</html>
